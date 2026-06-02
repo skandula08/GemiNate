@@ -1,0 +1,14 @@
+form.messageCreation {
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface-raised);
+}
+
+form.messageCreation textarea {
+  width: 100%;
+  margin: 0;
+  min-height: 2.5rem;
+  max-height: 8rem;
+  resize: none;
+  border-radius: var(--radius-lg);
+}

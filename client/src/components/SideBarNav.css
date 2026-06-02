@@ -1,0 +1,120 @@
+.sideBarNav {
+  padding-inline: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  gap: var(--space-1);
+  padding-block: var(--space-4);
+  /* background-color: var(--color-chrome-bg); */
+  /* background-image: linear-gradient(180deg, var(--color-chrome-bg), var(--color-chrome-selected)); */
+  background: linear-gradient(to top, #dcd6ff 0%, #bcd2ff 20%, var(--color-chrome-bg) 70%);
+  grid-area: sidebar;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  position: fixed;
+  top: 50px;
+  left: 0;
+  height: 100vh; /* full screen height */
+
+  overflow: hidden;
+}
+.menu_button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 2.5rem;
+  width: 100%;
+  /* border-radius: var(--radius-sm); */
+  color: var(--color-chrome-muted);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  padding-inline: var(--space-3);
+  border-left: 3px solid transparent;
+  border-bottom: 1px solid var(--color-chrome-selected);
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.menu_button:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+  color: var(--color-chrome-text);
+  text-decoration: none;
+  /* filter: blur(8px);  */
+}
+
+.menu_selected {
+  background-image: linear-gradient(-70deg, var(--color-chrome-bg), var(--color-chrome-selected));
+
+  color: var(--color-chrome-text);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-semibold);
+  border-left-color: var(--color-accent);
+}
+
+.menu_selected::after {
+  content: "★";
+  left: 6px;
+  text-shadow: 0 0 6px var(--color-accent);
+  position: absolute;
+  animation: starSpin 1s ease-in-out forwards;
+}
+.menu_selected::before {
+  content: "";
+  left: 11px;
+  width: 5px;
+  border: transparent;
+  border-radius: var(--radius-sm);
+  filter: blur(2px);
+  height: 20px;
+  background-color: var(--color-chrome-bg);
+  position: absolute;
+}
+
+/* Spin animation (only once) */
+@keyframes starSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  /* 50% {
+    transform: rotate(180deg);
+  } */
+  100% {
+    transform: rotate(144deg);
+  }
+}
+
+.menu_selected:hover {
+  background-color: rgba(111, 98, 255, 0.28);
+}
+
+.clouds {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 20% 100%, #cfd8ff 60px, transparent 61px),
+    radial-gradient(circle at 40% 100%, #bcd2ff 80px, transparent 81px),
+    radial-gradient(circle at 65% 100%, #d6ccff 150px, transparent 71px),
+    radial-gradient(circle at 85% 100%, #c3d4ff 90px, transparent 91px);
+
+  /* filter: blur(8px);  */
+  /* makes them fluffy */
+  opacity: 0.9;
+}
+.clouds::after {
+  filter: blur(8px);
+}
+
+@keyframes cloudMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

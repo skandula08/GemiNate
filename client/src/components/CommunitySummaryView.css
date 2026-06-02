@@ -1,0 +1,68 @@
+.communitySummary {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-4);
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.communitySummary:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-strong);
+  /* background: linear-gradient(to left, var(--color-surface-raised) 60%, var(--color-navy-hover) 100%); */
+  transition: 0.4s ease-in-out;
+}
+
+.communitySummary .communityName {
+  flex-grow: 1;
+  color: var(--color-text-link);
+  font-weight: var(--font-medium);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.communitySummary .memberCount {
+  text-align: center;
+  width: 8rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.communitySummary .communityDescription {
+  width: 16rem;
+  max-width: 16rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  transition:
+    max-width var(--transition-base),
+    white-space var(--transition-base);
+}
+
+.communitySummary:hover .communityDescription {
+  white-space: normal;
+  overflow: visible;
+  max-width: 20rem;
+  text-overflow: clip;
+}
+
+.editBanner {
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+}

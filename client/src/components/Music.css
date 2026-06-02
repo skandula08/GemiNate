@@ -1,0 +1,155 @@
+.trackListItem {
+  display: flex;
+  justify-content: space-between;
+  background-color: royalblue;
+  border: 1px solid lightskyblue;
+  border-radius: 3px;
+  margin: 1px;
+  color: #ffffff;
+  /* */
+}
+.trackListItem:hover {
+  background: #6a94ff;
+}
+
+.listContainer {
+  border: 1px solid royalblue;
+  /* background-color: 1px solid s; */
+  overflow: scroll;
+  border-radius: 5px;
+  /* width: 350px; */
+  height: 100px;
+}
+.trackListItem b,
+i {
+  margin-left: 5px;
+}
+.trackListItem img {
+  margin: 5px;
+}
+
+.deleteButton {
+  border: none;
+  /* background-color: white; */
+  background-color: rgb(25, 68, 199);
+}
+
+.deleteButton:hover {
+  border: none;
+  /* background-color: white; */
+  background-color: rgb(227, 79, 106);
+}
+.music-player {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  /* width: 350px; */
+
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background: #f7f46c;
+  color: black;
+
+  /* width: 500px; */
+}
+
+/* Album art */
+.album-art {
+  border-radius: 10px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+/* Right side layout */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Text */
+.track-title {
+  font-weight: bold;
+  /* font-size: 18px; */
+}
+
+.track-artist {
+  /* font-size: 14px; */
+  color: #666;
+}
+
+/* Progress bar */
+.progress {
+  width: 100%;
+  appearance: none;
+  height: 4px;
+  background: #ccc;
+  border-radius: 2px;
+  outline: none;
+}
+
+.progress::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls button {
+  border: none;
+  background: none;
+  /* font-size: 18px; */
+  cursor: pointer;
+}
+
+.controls button:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Waveform */
+.waveform {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 40px;
+}
+
+.bar {
+  width: 3px;
+  background: black;
+  border-radius: 2px;
+  animation: bounce 1s infinite ease-in-out;
+}
+
+.bar:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+.bar:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    height: 10px;
+  }
+  50% {
+    height: 30px;
+  }
+}

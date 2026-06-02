@@ -1,0 +1,7 @@
+div.chatContainer {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  height: 100%;
+  border-left: 1px solid var(--color-border);
+  overflow: scroll;
+}

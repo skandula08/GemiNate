@@ -1,0 +1,12 @@
+span.opBlue {
+  color: var(--color-accent);
+  font-weight: var(--font-bold);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+}
+
+.bigText {
+  font-family: var(--text-display);
+}

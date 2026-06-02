@@ -1,0 +1,113 @@
+.gameWrapper {
+  transform: scale(0.85);
+  transform-origin: top left;
+}
+
+.betWrapper {
+  transform: scale(0.95);
+  transform-origin: top left;
+}
+.cards {
+  display: flex;
+  gap: 0;
+}
+
+.card {
+  width: 52px;
+  height: 72px;
+  background: var(--color-surface-raised);
+  /* border: 0.4px solid var(--color-border-strong); */
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  margin-left: -28px;
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text-primary);
+  margin-bottom: 3px;
+}
+
+.hole {
+  width: 52px;
+  height: 72px;
+  background: var(--color-danger);
+  border: 2px solid var(--color-danger-hover);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.875rem;
+  color: var(--color-danger-fg);
+  margin-left: -28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.cards .card:first-child,
+.cards .hole:first-child {
+  margin-left: 0;
+}
+
+.playersHands {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--space-3);
+}
+
+.playerHand {
+  background: var(--color-accent-muted);
+  border: 1px solid rgba(111, 98, 255, 0.2);
+  padding: var(--space-3);
+  border-radius: var(--radius-lg);
+}
+
+.currentPlayer {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  background: rgba(111, 98, 255, 0.22);
+}
+
+.controlsSection {
+  margin-top: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.betting-buttons-container {
+  display: flex;
+  width: 200px;
+}
+.submitBetButtons {
+  display: flex;
+  width: 200px;
+}
+
+.betting-buttons-container button {
+  margin: 3px;
+  background-color: var(--color-navy-hover);
+  font-size: 10px;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+}
+
+.resetButton {
+  margin: 3px;
+  background-color: var(--color-danger-hover);
+  font-size: 10px;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+}
+
+.betButton {
+  margin: 3px;
+  background-color: var(--color-primary-hover);
+  font-size: 10px;
+  color: var(--color-navy);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+}

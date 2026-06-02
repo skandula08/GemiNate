@@ -1,0 +1,42 @@
+{
+  "name": "@gamenite/server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "check": "tsc",
+    "lint": "eslint .",
+    "prettier": "prettier --ignore-path ../.gitignore --check . ",
+    "prettier:fix": "prettier --ignore-path ../.gitignore --write .",
+    "test": "vitest run --coverage",
+    "dev": "nodemon --watch src --exec node ./src/server.ts",
+    "start": "MODE=production node ./src/server.ts",
+    "vitest": "vitest"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/express-session": "^1.18.2",
+    "@types/passport": "^1.0.17",
+    "@types/passport-google-oauth20": "^2.0.17",
+    "@types/supertest": "^6.0.3",
+    "@types/uuid": "^10.0.0",
+    "@vitest/coverage-v8": "^4.0.18",
+    "nodemon": "^3.1.11",
+    "socket.io-client": "^4.8.3",
+    "supertest": "^7.2.2",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "@gamenite/shared": "^1.0.0",
+    "@keyv/mongo": "^3.1.0",
+    "connect-mongo": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "keyv": "^5.5.5",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "socket.io": "^4.8.1",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.6"
+  }
+}
